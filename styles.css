@@ -8,3 +8,41 @@ html,body{max-width:100%;overflow-x:hidden}img{max-width:100%}.service-grid arti
 @media (min-width:621px) and (max-width:980px){.header{padding-inline:4vw}.header nav{gap:13px;font-size:10px}.header-cta{padding:10px}.hero{padding-left:7vw;padding-right:7vw}.hero-content{max-width:58%}.hero-art{right:4vw;width:36vw}.section{padding-left:7vw;padding-right:7vw}.enquire-layout{padding-left:7vw;padding-right:7vw;gap:4%}#enquiry-form{padding:24px}}
 @media (max-width:760px){.header{padding-inline:5vw}.menu-toggle{width:44px;height:44px;display:grid;place-items:center;cursor:pointer}.header nav{gap:0}.header nav a{padding:12px 4px;border-bottom:1px solid #ffffff18}.hero{min-height:620px;padding:130px 7vw 45px}.hero-content{max-width:100%}.hero-art{top:170px;right:-12vw;width:58vw;height:310px;opacity:.23}.hero-note{margin-top:58px;max-width:80%}.section-head{align-items:start}.service-grid{gap:16px}.facts{padding-inline:7vw}.enquire-layout{padding-top:35px}.enquire-aside{display:grid;grid-template-columns:1fr 1fr;column-gap:18px;align-items:start}.enquire-aside img{grid-row:span 4;height:100%;min-height:210px}.enquire-aside h3{margin-top:0}}
 @media (max-width:520px){h1{font-size:clamp(42px,12vw,54px)}.hero{min-height:590px;padding-top:120px}.hero p{font-size:14px;max-width:95%}.hero-actions{gap:15px;flex-wrap:wrap}.hero-note{font-size:8px;margin-top:48px}.hero-art{top:195px;right:-18vw;width:70vw;height:270px}.section{padding:62px 6vw}.section h2{font-size:clamp(36px,10vw,46px)}.facts{padding-inline:6vw}.service-grid{grid-template-columns:1fr}.service-grid article{padding:16px}.service-image{height:220px}.wide-visual{height:190px}.quality-grid{grid-template-columns:1fr 1fr;gap:8px}.quality-grid article{padding:14px 10px}.quality-grid p{font-size:11px}.equipment{padding:16px}.benefit-tags span{font-size:7px;padding:8px}.contact{padding-inline:6vw}.contact-card{padding:18px}.contact-button{justify-self:start}footer{padding:22px 6vw;grid-template-columns:1fr auto}footer>span{font-size:8px;letter-spacing:.06em}.enquire-hero{padding:120px 6vw 38px}.enquire-layout{padding:28px 5vw 55px}#enquiry-form{padding:20px 16px;gap:15px}#enquiry-form input,#enquiry-form select,#enquiry-form textarea{font-size:16px;min-height:44px}#enquiry-form textarea{min-height:120px}.enquire-aside{grid-template-columns:1fr}.enquire-aside img{grid-row:auto;height:210px}.enquire-aside h3{margin-top:16px}}
+
+/* Small-screen responsive fixes */
+@media screen and (max-width:760px){
+  .header{height:68px;padding:0 5vw}
+  .header nav{display:none!important;position:absolute;top:68px;left:0;right:0;width:100%;padding:14px 5vw;background:var(--dark);flex-direction:column;gap:0;box-shadow:0 16px 24px #0006}
+  .header nav.open{display:flex!important}
+  .header nav a{display:block;width:100%;padding:13px 4px;border-bottom:1px solid #ffffff20}
+  .menu-toggle{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;position:relative;z-index:2}
+  .header-cta{display:none}
+  .hero{min-height:auto;padding:122px 7vw 44px}
+  .hero-content{width:100%;max-width:100%}
+  .hero h1,.enquire-hero h1{max-width:100%;font-size:clamp(36px,10vw,52px);overflow-wrap:anywhere}
+  .hero p,.enquire-hero p{max-width:100%}
+  .hero-art{right:-25vw;width:70vw;opacity:.2;pointer-events:none}
+  .hero-note{max-width:100%;margin-top:52px}
+  .facts,.split,.section-head,.contact,.service-grid,.enquire-layout{grid-template-columns:minmax(0,1fr)}
+  .service-grid article,.contact-card,#enquiry-form,.enquire-aside{min-width:0}
+  .service-image{height:auto;aspect-ratio:16/9}
+  .wide-visual{height:auto;max-height:230px;aspect-ratio:16/9}
+  .quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #enquiry-form{grid-template-columns:minmax(0,1fr)}
+  #enquiry-form>*{grid-column:1;min-width:0}
+  #enquiry-form input,#enquiry-form select,#enquiry-form textarea{width:100%;min-width:0;font-size:16px}
+  #enquiry-form .button{width:100%;justify-content:space-between}
+  .enquire-aside{display:block}
+  .enquire-aside img{height:auto;aspect-ratio:16/10}
+  footer{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px}
+  footer>span{grid-column:1/-1;grid-row:auto;line-height:1.5}
+}
+@media screen and (max-width:380px){
+  .section{padding:48px 5vw}
+  .hero{padding-left:5vw;padding-right:5vw}
+  .hero h1,.enquire-hero h1{font-size:35px}
+  .brand{font-size:11px;letter-spacing:.06em}
+  .brand small{font-size:6px}
+  .quality-grid{grid-template-columns:1fr}
+  .hero-actions{align-items:flex-start;flex-direction:column}
+}
