@@ -46,3 +46,5 @@ html,body{max-width:100%;overflow-x:hidden}img{max-width:100%}.service-grid arti
   .quality-grid{grid-template-columns:1fr}
   .hero-actions{align-items:flex-start;flex-direction:column}
 }
+
+@media screen and (max-width:520px){.hero-actions{align-items:flex-start;flex-direction:column;gap:12px}.hero-actions .button{width:100%;max-width:360px;justify-content:space-between}.hero-actions .text-link{padding:8px 0}}
